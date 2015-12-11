@@ -4,14 +4,14 @@
 #include <Countdown.h>
 #include <MQTTClient.h>
 
-#define MS_PROXY                "u614vn.messaging.internetofthings.ibmcloud.com"        // 确认能 ping 通
-#define MQTT_PORT               1883                                                    // 如果 TLS，则 8883 或 443
+#define MS_PROXY                "u614vn.messaging.internetofthings.ibmcloud.com"
+#define MQTT_PORT               1883
 #define MQTT_MAX_PACKET_SIZE    100
 #define MQTT_CLIENT_ID          "d:u614vn:iotsample-arduino:00ffbbccde02"               // d:org_id:device_type:device_id, d - device, <org_id>, <device_type>, <device_id>，必须与设备注册信息一致
 #define MQTT_TOPIC              "iot-2/evt/status/fmt/json"
-#define AUTHMETHOD              "use-token-auth"                                        // 不能是 token，尽管确认页面中写的是 token
+#define AUTHMETHOD              "use-token-auth"
 #define AUTHTOKEN               "password"
-byte mac[] = { 0x00, 0xFF, 0xBB, 0xCC, 0xDE, 0x02 };                                    // 与 <device_id> 一致
+byte mac[] = { 0x00, 0xFF, 0xBB, 0xCC, 0xDE, 0x02 };                                    // consistent with <device_id>
 
 //For Arduino Yun, instantiate a YunClient and use the instance to declare
 //an IPStack ipstack(c) instead of EthernetStack with c being the YunClient
@@ -24,8 +24,8 @@ IPStack ipstack(c);
 MQTT::Client<IPStack, Countdown, 100, 1> client = MQTT::Client<IPStack, Countdown, 100, 1>(ipstack);
 
 // Wifi/WLAN
-#define WLAN_SSID       "TP-LINK_64830E"
-#define WLAN_PASS       "admin1103"
+#define WLAN_SSID       "Wifi-SSID"
+#define WLAN_PASS       "Wifi-Password"
 #define WLAN_SECURITY   WLAN_SEC_WPA2                           // Security can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
 
 // CC3000
