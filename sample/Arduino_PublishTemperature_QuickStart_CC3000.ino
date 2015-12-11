@@ -28,8 +28,8 @@ MQTT::Client<IPStack, Countdown, 100, 1> client = MQTT::Client<IPStack, Countdow
 String deviceEvent;
 
 // Wifi/WLAN
-#define WLAN_SSID       "TP-LINK_64830E"
-#define WLAN_PASS       "admin1103"
+#define WLAN_SSID       "Wifi-SSID"
+#define WLAN_PASS       "Wifi-Password"
 #define WLAN_SECURITY   WLAN_SEC_WPA2                           // Security can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
 
 // CC3000
